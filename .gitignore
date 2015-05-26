@@ -1,4 +1,8 @@
-jasmine/
-bower_components/
-node_modules/
-npm-debug.log
+node_modules
+dist
+coverage
+.tmp
+.sass-cache
+app/bower_components
+
+**/*.swp
