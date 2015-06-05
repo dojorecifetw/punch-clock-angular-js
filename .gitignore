@@ -4,5 +4,5 @@ coverage
 .tmp
 .sass-cache
 app/bower_components
-
+npm-debug.log
 **/*.swp

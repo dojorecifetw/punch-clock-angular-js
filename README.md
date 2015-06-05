@@ -35,6 +35,9 @@ $ bower install #install bower dependencies
 OBS: To verify if all modules that this app has dependency are installed. The list of all them are in package.json file.
 
 3 - Run grunt serve command for run local server command
+
+It's necessary run npm install -g grunt-cli. This provide the command grunt.
+
 ```bash
 $ grunt serve
 ```
