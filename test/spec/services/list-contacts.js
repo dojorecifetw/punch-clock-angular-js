@@ -3,7 +3,7 @@
 describe('Service: listContacts', function () {
 
   // load the service's module
-  beforeEach(module('angularContactsListApp'));
+  beforeEach(module('punchClockAngular'));
 
   // instantiate service
   var listContacts;
@@ -13,7 +13,7 @@ describe('Service: listContacts', function () {
 
   it('listContacts have to be created with 6 elements', function () {
     expect(!!listContacts).toBe(true);
-    expect(listContacts.length).toEqual(6);
+    expect(listContacts.length).toEqual(7);
   });
 
 });

@@ -3,7 +3,7 @@
 describe('Directive: navbar', function () {
 
   // load the directive's module
-  beforeEach(module('angularContactsListApp'));
+  beforeEach(module('punchClockAngular'));
 
   var element,
     template,

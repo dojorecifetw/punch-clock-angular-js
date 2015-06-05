@@ -3,7 +3,7 @@
 describe('Service: ContactsService', function () {
 
   // load the service's module
-  beforeEach(module('angularContactsListApp'));
+  beforeEach(module('punchClockAngular'));
 
   // instantiate service
   var ContactsService,
