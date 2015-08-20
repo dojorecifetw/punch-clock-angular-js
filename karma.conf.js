@@ -1,59 +1,72 @@
 // Karma configuration
-// http://karma-runner.github.io/0.10/config/configuration-file.html
+// Generated on Tue May 12 2015 22:43:28 GMT-0300 (BRT)
 
 module.exports = function(config) {
   config.set({
-    // base path, that will be used to resolve files and exclude
-    basePath: '',
 
-    // testing framework to use (jasmine/mocha/qunit/...)
+    // base path, that will be used to resolve files and exclude
+    basePath: './',
+
+
+    // frameworks to use
     frameworks: ['jasmine'],
 
+
     // list of files / patterns to load in the browser
-    files: [
-      'app/bower_components/angular/angular.js',
-      'app/bower_components/angular-mocks/angular-mocks.js',
-      'app/bower_components/angular-route/angular-route.js',
-      'app/bower_components/angular-keepr/dist/keepr.js',
-      'app/scripts/*.js',
-      'app/scripts/**/*.js',
-      'test/spec/**/*.js'
+    files : [
+      'node_modules/angular/angular.js',
+      'node_modules/angular-mocks/angular-mocks.js',
+      'app/punch/**/*.js'
+    ], 
+
+
+    // list of files to exclude
+    exclude: [
+      
     ],
 
-    // list of files / patterns to exclude
-    exclude: [],
+
+    // test results reporter to use
+    // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
+    reporters: ['progress'],
+
 
     // web server port
-    port: 8080,
+    port: 9876,
+
+
+    // enable / disable colors in the output (reporters and logs)
+    colors: true,
+
 
     // level of logging
-    // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
+    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
     logLevel: config.LOG_INFO,
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: false,
+    autoWatch: true,
 
 
     // Start these browsers, currently available:
     // - Chrome
     // - ChromeCanary
     // - Firefox
-    // - Opera
-    // - Safari (only Mac)
+    // - Opera (has to be installed with `npm install karma-opera-launcher`)
+    // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
     // - PhantomJS
-    // - IE (only Windows)
-    browsers: ['Chrome'],
+    // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
+    browsers: ['PhantomJS'],
 
-    // Code coverage report
-    reporters: ['progress', 'coverage'],
-    preprocessors: {
-      'app/scripts/**/*.js': ['coverage']
-    },
-    coverageReporter: {
-      type:'html',
-      dir:'coverage'
-    },
+    plugins : [
+            'karma-jasmine',
+ 	        'karma-phantomjs-launcher'
+            ],
+
+      
+    // If browser does not capture in given timeout [ms], kill it
+    captureTimeout: 60000,
+
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
