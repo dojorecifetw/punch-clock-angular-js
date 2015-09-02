@@ -1,11 +1,9 @@
 angular.module('PunchApp',[]).controller("PunchController",
 function($scope) {
     var punches = [];
-    $scope.date = '';
-    $scope.time = '';
     
-    $scope.addPunch = function() {
-        punches.push({date: $scope.date, time: $scope.time});
+    $scope.addPunch = function(date, time) {
+        punches.push({date: date, time: time});
     };
     
     $scope.getAll = function() {
