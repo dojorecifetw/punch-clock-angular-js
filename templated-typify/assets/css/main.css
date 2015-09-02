@@ -3552,6 +3552,7 @@
 		#banner .button {
 			background-color: #f7f7f7;
 			color: #555 !important;
+            margin: 5px;
 		}
 
 			#banner input[type="submit"]:hover,
